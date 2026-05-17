@@ -121,6 +121,7 @@ cd frontend && npm run build
 ### Login and query via API
 
 > ⚠️ Demo credentials shown below are for local development only and must be replaced before any shared or production deployment.
+> Current demo users are defined in `backend/app/security/auth.py` (`DEMO_USERS`) and should be replaced with real identity-provider integration for non-local environments.
 
 ```bash
 # Login
@@ -188,3 +189,4 @@ If you plan a major change, please open an issue first to align on scope.
 
 This repository currently does not include a `LICENSE` file.
 Until a license is explicitly published, treat all rights as reserved by the repository owner.
+No public licensing timeline is currently documented in this repository.
