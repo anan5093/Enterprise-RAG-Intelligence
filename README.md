@@ -124,9 +124,12 @@ cd frontend && npm run build
 
 ```bash
 # Login
-TOKEN=$(curl -s -X POST http://localhost:8000/login \
+curl -s -X POST http://localhost:8000/login \
   -H "Content-Type: application/json" \
-  -d '{"username":"admin","password":"admin-change-me"}' | python -c "import sys,json; print(json.load(sys.stdin)['access_token'])")
+  -d '{"username":"admin","password":"admin-change-me"}'
+
+# Copy the access_token value from the response and export it
+export TOKEN="<PASTE_ACCESS_TOKEN>"
 
 # Query
 curl -s -X POST http://localhost:8000/query \
@@ -141,15 +144,7 @@ curl -s -X POST http://localhost:8000/query \
 curl -s -X POST http://localhost:8000/ingest \
   -H "Authorization: Bearer $TOKEN" \
   -H "Content-Type: application/json" \
-  -d '{
-    "path":"examples/data/security_alerts.json",
-    "source_type":"json",
-    "department":"compliance",
-    "owner":"compliance",
-    "confidentiality":"confidential",
-    "allowed_roles":["Admin","Compliance"],
-    "rbac_tags":["compliance","alerts"]
-  }'
+  -d '{"path":"examples/data/security_alerts.json","source_type":"json","department":"compliance","owner":"compliance","confidentiality":"confidential","allowed_roles":["Admin","Compliance"],"rbac_tags":["compliance","alerts"]}'
 ```
 
 ### Run with Docker Compose
