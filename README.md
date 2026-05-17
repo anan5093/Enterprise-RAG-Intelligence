@@ -187,4 +187,4 @@ If you plan a major change, please open an issue first to align on scope.
 ## License
 
 This repository currently does not include a `LICENSE` file.
-Do not assume usage or redistribution rights until a license is explicitly published.
+Until a license is explicitly published, treat all rights as reserved by the repository owner.
