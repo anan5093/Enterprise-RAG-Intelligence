@@ -1,0 +1,8 @@
+{
+  "admin": "Admin",
+  "finance_user": "Finance",
+  "eng_user": "Engineering",
+  "hr_user": "HR",
+  "security_user": "Security",
+  "guest_user": "Guest"
+}

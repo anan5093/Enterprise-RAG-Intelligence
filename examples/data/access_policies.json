@@ -1,0 +1,14 @@
+{
+  "payroll.csv": {
+    "allowed_roles": ["Finance", "Admin"],
+    "sensitivity": "HIGH"
+  },
+  "security_alerts.json": {
+    "allowed_roles": ["Security", "Admin"],
+    "sensitivity": "CRITICAL"
+  },
+  "engineering_kb.md": {
+    "allowed_roles": ["Engineering", "Admin"],
+    "sensitivity": "MEDIUM"
+  }
+}

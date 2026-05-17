@@ -1,5 +1,12 @@
-# Engineering Operations Knowledge Base
+# Engineering Knowledge Base
 
-Incident reviews must include service name, incident window, user impact, and rollback evidence.
-Infrastructure failure timelines are stored in operational logs and may be correlated with compliance incident timestamps when authorized.
+## Deployment Policy
 
+All production deployments require:
+- Security approval
+- Compliance review
+- CI/CD validation
+
+## Incident Response
+
+Critical incidents must be acknowledged within 15 minutes.

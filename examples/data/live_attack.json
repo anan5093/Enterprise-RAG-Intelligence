@@ -1,0 +1,9 @@
+[
+  {
+    "alert_id": "ALT-900",
+    "severity": "critical",
+    "system": "Payment Gateway",
+    "description": "Unauthorized admin access detected",
+    "status": "Open"
+  }
+]

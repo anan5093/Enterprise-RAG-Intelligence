@@ -1,0 +1,14 @@
+[
+  {
+    "timestamp": "2026-05-16T10:00:00",
+    "user": "eng_user",
+    "action": "LOGIN_SUCCESS",
+    "ip": "192.168.1.20"
+  },
+  {
+    "timestamp": "2026-05-16T10:15:00",
+    "user": "unknown_user",
+    "action": "LOGIN_FAILED",
+    "ip": "10.0.0.8"
+  }
+]

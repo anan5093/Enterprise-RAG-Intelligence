@@ -1,0 +1,16 @@
+[
+  {
+    "alert_id": "ALT-001",
+    "severity": "Critical",
+    "system": "VPN Gateway",
+    "description": "Multiple failed login attempts detected",
+    "status": "Open"
+  },
+  {
+    "alert_id": "ALT-002",
+    "severity": "High",
+    "system": "Production API",
+    "description": "Suspicious API traffic detected",
+    "status": "Investigating"
+  }
+]

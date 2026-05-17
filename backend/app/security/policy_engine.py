@@ -15,13 +15,32 @@ class PolicyEngine:
 
     def can_access_chunk(self, principal: Principal, chunk: DocumentChunk) -> PolicyDecision:
         metadata = chunk.metadata
-        if Role.admin in principal.roles:
+
+        principal_roles = {
+            str(getattr(r, "value", r)).lower()
+            for r in principal.roles
+        }
+
+        allowed_roles = {
+            str(getattr(r, "value", r)).lower()
+            for r in metadata.allowed_roles
+        }
+
+        # Admin bypass
+        if "admin" in principal_roles:
             return PolicyDecision(True, "Admin role bypass granted")
-        if not set(principal.roles).intersection(metadata.allowed_roles):
+
+        # RBAC role check
+        if not principal_roles.intersection(allowed_roles):
             return PolicyDecision(False, "Principal role is not in allowed_roles")
+
+        # Department check
         if metadata.department not in principal.departments and metadata.department != "global":
             return PolicyDecision(False, "Principal department does not match document department")
+
+        # Sensitivity clearance check
         if not sensitivity_allows(principal.clearance, metadata.sensitivity_level):
             return PolicyDecision(False, "Principal clearance below sensitivity_level")
+
         return PolicyDecision(True, "Role, department, and sensitivity checks passed")
 

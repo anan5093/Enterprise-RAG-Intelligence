@@ -1,0 +1,4 @@
+incident_id,severity,system,status
+INC-001,Critical,Authentication API,Resolved
+INC-002,High,VPN Gateway,Investigating
+INC-003,Medium,Database Cluster,Open

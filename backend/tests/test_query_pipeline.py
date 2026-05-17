@@ -73,6 +73,6 @@ async def test_authorized_query_returns_citations(tmp_path):
     answer = await service.answer("Summarize Q4 finance compliance findings", principal)
 
     assert "vendor review cadence" in answer.answer
+    assert chunk.chunk_id not in answer.answer
     assert answer.citations[0].source == "finance_q4_report.pdf"
     assert answer.trace.authorized_chunk_ids == [chunk.chunk_id]
-

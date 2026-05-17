@@ -68,6 +68,13 @@ Open `http://localhost:3000`.
 5. Ask `Show payroll data`.
 6. The system refuses with `Insufficient authorized data available.` and logs the attempt.
 
+To index all bundled examples into the local FAISS store:
+
+```bash
+cd backend
+python -m app.scripts.ingest_examples
+```
+
 ## Core Security Design
 
 RBAC filtering occurs in `HybridRetriever.retrieve()` before reranking and generation. Denied chunks are never passed to `PromptBuilder`, so unauthorized documents cannot leak through the LLM context window.
