@@ -1,0 +1,4 @@
+id,quarter,finding,owner,status
+fin-001,Q4,"Vendor review cadence improved to monthly after compliance finding.",Finance,closed
+fin-002,Q4,"Payroll exports require dual approval and audit retention.",Finance,open
+

@@ -1,0 +1,32 @@
+roles:
+  Admin:
+    clearance: restricted
+    departments: ["global", "finance", "engineering", "compliance", "operations", "hr"]
+  HR:
+    clearance: confidential
+    departments: ["hr"]
+  Finance:
+    clearance: confidential
+    departments: ["finance"]
+  Engineering:
+    clearance: internal
+    departments: ["engineering"]
+  Compliance:
+    clearance: restricted
+    departments: ["compliance", "finance", "operations"]
+  Operations:
+    clearance: confidential
+    departments: ["operations"]
+  Guest:
+    clearance: public
+    departments: ["global"]
+rules:
+  - name: deny_by_default
+    effect: deny
+  - name: role_department_sensitivity_allow
+    effect: allow
+    conditions:
+      role_intersects_allowed_roles: true
+      department_matches_or_global: true
+      clearance_gte_sensitivity: true
+

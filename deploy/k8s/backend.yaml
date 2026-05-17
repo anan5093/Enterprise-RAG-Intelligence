@@ -1,0 +1,40 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: secure-rag-backend
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: secure-rag-backend
+  template:
+    metadata:
+      labels:
+        app: secure-rag-backend
+    spec:
+      containers:
+        - name: backend
+          image: secure-rag-backend:latest
+          ports:
+            - containerPort: 8000
+          envFrom:
+            - secretRef:
+                name: secure-rag-secrets
+          readinessProbe:
+            httpGet:
+              path: /health
+              port: 8000
+            initialDelaySeconds: 5
+            periodSeconds: 10
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: secure-rag-backend
+spec:
+  selector:
+    app: secure-rag-backend
+  ports:
+    - port: 8000
+      targetPort: 8000
+
