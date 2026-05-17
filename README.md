@@ -120,6 +120,8 @@ cd frontend && npm run build
 
 ### Login and query via API
 
+> ⚠️ Demo credentials shown below are for local development only and must be replaced before any shared or production deployment.
+
 ```bash
 # Login
 TOKEN=$(curl -s -X POST http://localhost:8000/login \
@@ -190,3 +192,4 @@ If you plan a major change, please open an issue first to align on scope.
 ## License
 
 This repository currently does not include a `LICENSE` file.
+Do not assume usage or redistribution rights until a license is explicitly published.
