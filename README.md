@@ -122,6 +122,7 @@ cd frontend && npm run build
 
 > ⚠️ Demo credentials shown below are for local development only and must be replaced before any shared or production deployment.
 > Current demo users are defined in `backend/app/security/auth.py` (`DEMO_USERS`) and should be replaced with real identity-provider integration for non-local environments.
+> These hardcoded accounts include administrative access and can permit unauthorized access if left enabled in deployed environments.
 
 ```bash
 # Login
@@ -184,6 +185,7 @@ Contributions are welcome via pull requests:
 4. Submit a PR with a clear summary and validation notes.
 
 If you plan a major change, please open an issue first to align on scope.
+While licensing is undecided, please discuss contribution and usage expectations in an issue before submitting large changes.
 
 ## License
 
