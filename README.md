@@ -147,6 +147,20 @@ curl -s -X POST http://localhost:8000/ingest \
 
 Demo credentials and endpoint details are documented in [docs/api.md](docs/api.md).
 
+## Screenshots
+
+### Login
+![Login](docs/screenshots/Enterprise%20Secure%20RAG%20-%20login.png)
+
+### Chat
+![Chat](docs/screenshots/Enterprise%20Secure%20RAG%20-chat.png)
+
+### Ingest
+![Ingest](docs/screenshots/Enterprise%20Secure%20RAG%20-%20ingest.png)
+
+### Admin
+![Admin](docs/screenshots/Enterprise%20Secure%20RAG%20-%20admin.png)
+
 ## Where users can get help
 
 - API reference: [docs/api.md](docs/api.md)
