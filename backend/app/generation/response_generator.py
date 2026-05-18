@@ -122,7 +122,11 @@ class ResponseGenerator:
                 if policy_summary:
                     policy_summaries.append(policy_summary)
             elif fields:
-                general_summaries.append(self._format_fields(fields))
+                formatted_fields = self._format_fields(fields)
+                if formatted_fields:
+                    general_summaries.append(formatted_fields)
+                else:
+                    general_summaries.extend(self._sentences_matching_query(chunk.text, query_terms, limit=1))
             else:
                 general_summaries.extend(self._sentences_matching_query(chunk.text, query_terms, limit=1))
 
