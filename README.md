@@ -153,7 +153,7 @@ Demo credentials and endpoint details are documented in [docs/api.md](docs/api.m
 ![Login](docs/screenshots/Enterprise%20Secure%20RAG%20-%20login.png)
 
 ### Chat
-![Chat](docs/screenshots/Enterprise%20Secure%20RAG%20-chat.png)
+![Chat](docs/screenshots/Enterprise%20Secure%20RAG%20-%20chat.png)
 
 ### Ingest
 ![Ingest](docs/screenshots/Enterprise%20Secure%20RAG%20-%20ingest.png)
