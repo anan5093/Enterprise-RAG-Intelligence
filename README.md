@@ -167,14 +167,14 @@ pip install -r requirements.txt
 2. **Run backend**
 
 ```bash
-cd /home/runner/work/Enterprise-RAG-Intelligence/Enterprise-RAG-Intelligence/backend
+cd backend
 uvicorn app.main:app --reload --host 0.0.0.0 --port 8000
 ```
 
 3. **Run frontend** (new terminal)
 
 ```bash
-cd /home/runner/work/Enterprise-RAG-Intelligence/Enterprise-RAG-Intelligence/frontend
+cd frontend
 npm install
 NEXT_PUBLIC_API_BASE_URL=http://localhost:8000 npm run dev
 ```
@@ -182,7 +182,7 @@ NEXT_PUBLIC_API_BASE_URL=http://localhost:8000 npm run dev
 4. **Optional: ingest bundled sample data**
 
 ```bash
-cd /home/runner/work/Enterprise-RAG-Intelligence/Enterprise-RAG-Intelligence/backend
+cd backend
 python -m app.scripts.ingest_examples
 ```
 
@@ -196,7 +196,7 @@ Local endpoints:
 ### Option B: Full stack with Docker Compose
 
 ```bash
-cd /home/runner/work/Enterprise-RAG-Intelligence/Enterprise-RAG-Intelligence
+# from repository root
 docker compose up --build
 ```
 
